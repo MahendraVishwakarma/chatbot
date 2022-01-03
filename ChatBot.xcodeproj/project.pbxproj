@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		80E3BF3227834CB600614577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E3BF3127834CB600614577 /* AppDelegate.swift */; };
 		80E3BF3427834CB600614577 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E3BF3327834CB600614577 /* SceneDelegate.swift */; };
-		80E3BF3627834CB600614577 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E3BF3527834CB600614577 /* ViewController.swift */; };
 		80E3BF3927834CB600614577 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80E3BF3727834CB600614577 /* Main.storyboard */; };
 		80E3BF3C27834CB600614577 /* ChatBot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80E3BF3A27834CB600614577 /* ChatBot.xcdatamodeld */; };
 		80E3BF3E27834CBD00614577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80E3BF3D27834CBD00614577 /* Assets.xcassets */; };
@@ -20,7 +19,6 @@
 		80E3BF2E27834CB600614577 /* ChatBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80E3BF3127834CB600614577 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80E3BF3327834CB600614577 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		80E3BF3527834CB600614577 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		80E3BF3827834CB600614577 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		80E3BF3B27834CB600614577 /* ChatBot.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChatBot.xcdatamodel; sourceTree = "<group>"; };
 		80E3BF3D27834CBD00614577 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,16 +56,55 @@
 		80E3BF3027834CB600614577 /* ChatBot */ = {
 			isa = PBXGroup;
 			children = (
-				80E3BF3127834CB600614577 /* AppDelegate.swift */,
-				80E3BF3327834CB600614577 /* SceneDelegate.swift */,
-				80E3BF3527834CB600614577 /* ViewController.swift */,
-				80E3BF3727834CB600614577 /* Main.storyboard */,
-				80E3BF3D27834CBD00614577 /* Assets.xcassets */,
-				80E3BF3F27834CBD00614577 /* LaunchScreen.storyboard */,
+				80E3BF4C27834D2C00614577 /* AppAssests */,
+				80E3BF4B27834D0B00614577 /* Views */,
+				80E3BF4A27834D0300614577 /* Scenes */,
+				80E3BF4927834CF900614577 /* Helper */,
+				80E3BF4827834CE900614577 /* Application */,
 				80E3BF4227834CBD00614577 /* Info.plist */,
 				80E3BF3A27834CB600614577 /* ChatBot.xcdatamodeld */,
 			);
 			path = ChatBot;
+			sourceTree = "<group>";
+		};
+		80E3BF4827834CE900614577 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				80E3BF3127834CB600614577 /* AppDelegate.swift */,
+				80E3BF3327834CB600614577 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		80E3BF4927834CF900614577 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		80E3BF4A27834D0300614577 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		80E3BF4B27834D0B00614577 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				80E3BF3F27834CBD00614577 /* LaunchScreen.storyboard */,
+				80E3BF3727834CB600614577 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		80E3BF4C27834D2C00614577 /* AppAssests */ = {
+			isa = PBXGroup;
+			children = (
+				80E3BF3D27834CBD00614577 /* Assets.xcassets */,
+			);
+			path = AppAssests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +178,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80E3BF3627834CB600614577 /* ViewController.swift in Sources */,
 				80E3BF3C27834CB600614577 /* ChatBot.xcdatamodeld in Sources */,
 				80E3BF3227834CB600614577 /* AppDelegate.swift in Sources */,
 				80E3BF3427834CB600614577 /* SceneDelegate.swift in Sources */,
