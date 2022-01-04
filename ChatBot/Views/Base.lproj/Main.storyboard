@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,9 +30,10 @@
                                     <navigationItem title="ChatBot" leftItemsSupplementBackButton="YES" id="OSq-kU-dxW"/>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="l9Z-Fh-Vun">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="l9Z-Fh-Vun">
                                 <rect key="frame" x="0.0" y="88" width="414" height="698"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v0a-tf-2Mg">
@@ -71,7 +71,6 @@
                                                 </constraints>
                                                 <state key="normal" image="attachment"/>
                                                 <connections>
-                                                    <action selector="btnAttachment:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iz2-U2-VV9"/>
                                                     <action selector="showAssests:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JIr-Ko-1cq"/>
                                                 </connections>
                                             </button>
@@ -137,6 +136,8 @@
                     <connections>
                         <outlet property="attachmentView" destination="asF-dW-XZD" id="ZR6-eP-LIQ"/>
                         <outlet property="bottom_constraight" destination="I2J-S6-97h" id="SWn-SY-cgO"/>
+                        <outlet property="btnSend" destination="f1J-BX-mjm" id="1qF-k7-UUC"/>
+                        <outlet property="chatTableView" destination="l9Z-Fh-Vun" id="YNF-d4-vhz"/>
                         <outlet property="chatView" destination="v0a-tf-2Mg" id="LAD-N4-cnT"/>
                         <outlet property="txtMessage" destination="Wf7-2l-aUG" id="aPQ-Ls-tRD"/>
                     </connections>
@@ -154,8 +155,5 @@
     <resources>
         <image name="attachment" width="30" height="30"/>
         <image name="send" width="40" height="40"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

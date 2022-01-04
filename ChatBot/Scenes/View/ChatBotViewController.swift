@@ -9,48 +9,19 @@ import UIKit
 
 class ChatBotViewController: UIViewController {
     
+    @IBOutlet weak var chatTableView: UITableView!
     @IBOutlet weak var bottom_constraight: NSLayoutConstraint!
     @IBOutlet weak var chatView: UIView!
     @IBOutlet weak var attachmentView: UIView!
+    @IBOutlet weak var btnSend: UIButton!
     @IBOutlet weak var txtMessage: GrowingTextView!
     var attachmentsItemsView = MenuItemView()
+    var viewModel: ChatViewModel?
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         setupUI()
-    }
-    @IBAction func showAssests(_ sender: UIButton) {
-        if sender.isSelected{
-            self.attachmentsItemsView.view.isHidden = false
-            UIView.animate(withDuration: 0.4) {
-                self.attachmentsItemsView.view.frame = CGRect(x: 10, y: self.chatView.frame.origin.y-300-10, width: self.view.frame.width-20, height: 300)
-            }
-        }else{
-            
-            self.attachmentsItemsView.view.frame = CGRect(x: 10, y: self.chatView.frame.maxY, width: self.view.frame.width-20, height: 30)
-            self.attachmentsItemsView.view.isHidden = true
-            
-        }
-        sender.isSelected = !sender.isSelected
-        
-        
-    }
-    private func setupUI() {
-        attachmentView.layer.cornerRadius = 20
-        attachmentView.layer.masksToBounds = true
-        self.attachmentsItemsView.view.frame = CGRect(x: 10, y: self.chatView.frame.maxY, width: self.view.frame.width-20, height: 30)
-        self.view.addSubview(attachmentsItemsView.view)
-        attachmentsItemsView.view.isHidden = true
-        attachmentsItemsView.view.layer.masksToBounds = true
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-        chatView.layer.shadowColor =  UIColor.gray.cgColor
-        chatView.layer.shadowOpacity = 1
-        chatView.layer.shadowOffset = CGSize(width:0, height:0)
-        chatView.layer.shadowRadius = 1
-        chatView.backgroundColor = .clear
     }
     
     @objc func keyboardWillShow(notification:NSNotification) {
@@ -79,10 +50,10 @@ class ChatBotViewController: UIViewController {
         
         let changeInHeight = (newHeight) * (show ? 1 : 0) + 10
         
-        
+        self.attachmentViewToggle(isOpen: false)
+        viewModel?.toogleAttachment = false
         UIView.animate(withDuration: animationDurarion, animations: { () -> Void in
             self.bottom_constraight.constant = changeInHeight
-            self.attachmentsItemsView.view.frame = CGRect(x: 10, y: self.chatView.frame.maxY, width: self.view.frame.width-20, height: 30)
             self.view.layoutIfNeeded()
         })
         
@@ -102,10 +73,27 @@ class ChatBotViewController: UIViewController {
         return .lightContent
         
     }
-    @IBAction func btnAttachment(_ sender: Any) {
+    
+    @IBAction func showAssests(_ sender: UIButton) {
+        if (viewModel?.toogleAttachment ?? false){
+            self.attachmentViewToggle(isOpen: false)
+        }else{
+            self.attachmentViewToggle(isOpen: true)
+            
+        }
+        viewModel?.toogleAttachment = !(viewModel?.toogleAttachment ?? false)
+        
     }
     
+   
     @IBAction func btnSend(_ sender: Any) {
+        if let msg = txtMessage.text {
+            btnSend.isEnabled = false
+            txtMessage.text = ""
+            self.viewModel?.sendMessage(messgae: msg)
+            self.attachmentViewToggle(isOpen: false)
+        }
+       
     }
     
 }

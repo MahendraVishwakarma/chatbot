@@ -14,13 +14,14 @@ import Foundation
 struct ChatModel:Codable {
     let success:Int?
     let errorMessage:String?
-    let message:Message?
+   // let message:Message?
     
 }
 
-struct Message:Codable {
+struct Message {
     let chatBotName:String?
     let chatBotID:Int?
     let message: String?
     let emotion:String?
+    let timestamp:Double
 }

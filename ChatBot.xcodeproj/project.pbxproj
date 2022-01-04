@@ -18,7 +18,15 @@
 		80E3BF7E278384F600614577 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E3BF7C278384F600614577 /* MenuItemView.swift */; };
 		80E3BF7F278384F600614577 /* MenuItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80E3BF7D278384F600614577 /* MenuItemView.xib */; };
 		80E3BF8127838F2B00614577 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E3BF8027838F2B00614577 /* ChatViewModel.swift */; };
-		80E3BF8327838FCD00614577 /* ChatModel{.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E3BF8227838FCD00614577 /* ChatModel{.swift */; };
+		80E3BF8327838FCD00614577 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E3BF8227838FCD00614577 /* ChatModel.swift */; };
+		80E3BF8727840CE800614577 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E3BF8527840CE800614577 /* Utils.swift */; };
+		80E3BF8827840CE800614577 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E3BF8627840CE800614577 /* WebServices.swift */; };
+		80E3BF8A27840E0900614577 /* ChatBotViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E3BF8927840E0900614577 /* ChatBotViewControllerExtension.swift */; };
+		80E3BF8E278450D400614577 /* LoginUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E3BF8C278450D400614577 /* LoginUserTableViewCell.swift */; };
+		80E3BF8F278450D400614577 /* LoginUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80E3BF8D278450D400614577 /* LoginUserTableViewCell.xib */; };
+		80E3BF92278450EB00614577 /* RemoteUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E3BF90278450EB00614577 /* RemoteUserTableViewCell.swift */; };
+		80E3BF93278450EB00614577 /* RemoteUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80E3BF91278450EB00614577 /* RemoteUserTableViewCell.xib */; };
+		80E3BF9527845B4500614577 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E3BF9427845B4400614577 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +43,15 @@
 		80E3BF7C278384F600614577 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
 		80E3BF7D278384F600614577 /* MenuItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuItemView.xib; sourceTree = "<group>"; };
 		80E3BF8027838F2B00614577 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
-		80E3BF8227838FCD00614577 /* ChatModel{.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatModel{.swift"; sourceTree = "<group>"; };
+		80E3BF8227838FCD00614577 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		80E3BF8527840CE800614577 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		80E3BF8627840CE800614577 /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
+		80E3BF8927840E0900614577 /* ChatBotViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotViewControllerExtension.swift; sourceTree = "<group>"; };
+		80E3BF8C278450D400614577 /* LoginUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserTableViewCell.swift; sourceTree = "<group>"; };
+		80E3BF8D278450D400614577 /* LoginUserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginUserTableViewCell.xib; sourceTree = "<group>"; };
+		80E3BF90278450EB00614577 /* RemoteUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUserTableViewCell.swift; sourceTree = "<group>"; };
+		80E3BF91278450EB00614577 /* RemoteUserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RemoteUserTableViewCell.xib; sourceTree = "<group>"; };
+		80E3BF9427845B4400614577 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +107,9 @@
 		80E3BF4927834CF900614577 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				80E3BF8427840CE800614577 /* WebServices */,
 				80E3BF7A2783717900614577 /* GrowingTextView.swift */,
+				80E3BF9427845B4400614577 /* Utilities.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -134,9 +152,11 @@
 		80E3BF4E278357D400614577 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				80E3BF8B27844FD900614577 /* chatCells */,
 				80E3BF50278357F800614577 /* ChatBotViewController.swift */,
 				80E3BF7C278384F600614577 /* MenuItemView.swift */,
 				80E3BF7D278384F600614577 /* MenuItemView.xib */,
+				80E3BF8927840E0900614577 /* ChatBotViewControllerExtension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -144,9 +164,29 @@
 		80E3BF4F278357DA00614577 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				80E3BF8227838FCD00614577 /* ChatModel{.swift */,
+				80E3BF8227838FCD00614577 /* ChatModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		80E3BF8427840CE800614577 /* WebServices */ = {
+			isa = PBXGroup;
+			children = (
+				80E3BF8527840CE800614577 /* Utils.swift */,
+				80E3BF8627840CE800614577 /* WebServices.swift */,
+			);
+			path = WebServices;
+			sourceTree = "<group>";
+		};
+		80E3BF8B27844FD900614577 /* chatCells */ = {
+			isa = PBXGroup;
+			children = (
+				80E3BF8C278450D400614577 /* LoginUserTableViewCell.swift */,
+				80E3BF8D278450D400614577 /* LoginUserTableViewCell.xib */,
+				80E3BF90278450EB00614577 /* RemoteUserTableViewCell.swift */,
+				80E3BF91278450EB00614577 /* RemoteUserTableViewCell.xib */,
+			);
+			path = chatCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,8 +248,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				80E3BF7F278384F600614577 /* MenuItemView.xib in Resources */,
+				80E3BF8F278450D400614577 /* LoginUserTableViewCell.xib in Resources */,
 				80E3BF4127834CBD00614577 /* LaunchScreen.storyboard in Resources */,
 				80E3BF3E27834CBD00614577 /* Assets.xcassets in Resources */,
+				80E3BF93278450EB00614577 /* RemoteUserTableViewCell.xib in Resources */,
 				80E3BF3927834CB600614577 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,14 +263,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80E3BF8A27840E0900614577 /* ChatBotViewControllerExtension.swift in Sources */,
 				80E3BF3C27834CB600614577 /* ChatBot.xcdatamodeld in Sources */,
+				80E3BF9527845B4500614577 /* Utilities.swift in Sources */,
 				80E3BF8127838F2B00614577 /* ChatViewModel.swift in Sources */,
+				80E3BF8727840CE800614577 /* Utils.swift in Sources */,
 				80E3BF7B2783717900614577 /* GrowingTextView.swift in Sources */,
 				80E3BF3227834CB600614577 /* AppDelegate.swift in Sources */,
+				80E3BF8E278450D400614577 /* LoginUserTableViewCell.swift in Sources */,
+				80E3BF92278450EB00614577 /* RemoteUserTableViewCell.swift in Sources */,
 				80E3BF51278357F800614577 /* ChatBotViewController.swift in Sources */,
+				80E3BF8827840CE800614577 /* WebServices.swift in Sources */,
 				80E3BF7E278384F600614577 /* MenuItemView.swift in Sources */,
 				80E3BF3427834CB600614577 /* SceneDelegate.swift in Sources */,
-				80E3BF8327838FCD00614577 /* ChatModel{.swift in Sources */,
+				80E3BF8327838FCD00614577 /* ChatModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
