@@ -34,8 +34,8 @@ class ChatBotViewController: UIViewController {
         }
         sender.isSelected = !sender.isSelected
         
+        
     }
-    
     private func setupUI() {
         attachmentView.layer.cornerRadius = 20
         attachmentView.layer.masksToBounds = true
@@ -46,7 +46,11 @@ class ChatBotViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-       
+        chatView.layer.shadowColor =  UIColor.gray.cgColor
+        chatView.layer.shadowOpacity = 1
+        chatView.layer.shadowOffset = CGSize(width:0, height:0)
+        chatView.layer.shadowRadius = 1
+        chatView.backgroundColor = .clear
     }
     
     @objc func keyboardWillShow(notification:NSNotification) {
